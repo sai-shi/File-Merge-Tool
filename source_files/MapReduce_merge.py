@@ -18,8 +18,8 @@ from collections import Counter
 from boto3.session import Session
 import boto3
 
-session = Session(aws_access_key_id='AKIAQ5EPO6JV3OGAPR7E',
-                  aws_secret_access_key='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')
+session = Session(aws_access_key_id='##############',
+                  aws_secret_access_key='#################')
 s3 = session.resource('s3')
 bucket = s3.Bucket('mapreduce-filemerge')
 
@@ -30,9 +30,6 @@ s3 = boto3.client('s3')
 
 bucket.download_file('data.zip', 'data.zip')
 
-# ssl._create_default_https_context = ssl._create_unverified_context
-#
-# url = 'https://cis.temple.edu/~edragut/CIS5517-Fall18/Data/disqus.zip'
 
 # Set data path and output file path globally
 DATA_PATH = os.getcwd() + '/For Merge Disqus/'
